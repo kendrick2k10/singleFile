@@ -8,6 +8,8 @@ const render = {}
 
 
 
+
+
 //Where Everything Starts
 
 document.body.innerHTML += bodyHTML
@@ -18,18 +20,3 @@ topRatedRender()
 headerFunctions()
 
 eventListener()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
