@@ -986,11 +986,16 @@ function headerFunctions() {
 }
 
 async function downloadLink(file, ticket) {
-    const url = `https://api.streamtape.com/file/dl?file=${file}&ticket=${ticket}`
-    let request = await fetch(url)
-    let response = await request.json()
-    //alert(response.status)
-    document.querySelector("#watch video").src = response.result.url
+    const urlS = `https://api.streamtape.com/file/dl?file=${file}&ticket=${ticket}`
+    try {
+      let request = await fetch(urlS)
+
+      let response = await request.json()
+      //alert(response.status)
+      document.querySelector("#watch video").src = response.result.url
+    } catch (e) {
+      alert("UNBLOCK CORS:", e)
+    }
 
 }
 
